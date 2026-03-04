@@ -1,6 +1,5 @@
 # IJAR-2026-Confidence-STL
 Code of submission IJA-D-26-00168 for the International Journal of Approximate Reasoning
-COMPUTATION TIME IS VERY LONG ON THIS PARTICULA EXAMPLE ~1H
 
 # Set-Based Monitoring and Safe Set Computation for a Neural Network Controlled System under STL Specifications
 
@@ -134,6 +133,7 @@ Reachable set data is written to the `simu_result/` directory.
 ---
 
 ## 3. System Description
+COMPUTATION TIME IS VERY LONG ON THIS PARTICULA EXAMPLE ~1H
 
 ### 3.1. Vehicle Dynamics
 
