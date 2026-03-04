@@ -133,7 +133,7 @@ Reachable set data is written to the `simu_result/` directory.
 ---
 
 ## 3. System Description
-COMPUTATION TIME IS VERY LONG ON THIS PARTICULA EXAMPLE ~1H
+COMPUTATION TIME IS VERY LONG ON THIS PARTICULAR EXAMPLE ~1H
 
 ### 3.1. Vehicle Dynamics
 
