@@ -281,8 +281,6 @@ Antoine Besset, Joris Tillet, and Julien Alexandre dit Sandretto — ENSTA Paris
 This research benefited from the support of the STARTS Projects — CIEDS — Institut Polytechnique.
 
 ## 10. References
-
-- A. Besset, J. Tillet, J. Alexandre dit Sandretto, *"Set-Based Monitoring for Signal Temporal Logic with Uncertainty Mitigation and Confidence Guarantees,"* International Journal of Approximate Reasoning, 2025.
 - A. Besset, J. Tillet, J. Alexandre dit Sandretto, *"Uncertainty Removal in Verification of Nonlinear Systems Against Signal Temporal Logic via Incremental Reachability Analysis,"* Proc. 64th IEEE CDC, 2025.
 - J. Alexandre dit Sandretto, A. Chapoutot, *"Validated Explicit and Implicit Runge-Kutta Methods,"* Reliable Computing, vol. 22, 2016.
 - O. Maler, D. Nickovic, *"Monitoring Temporal Properties of Continuous Signals,"* LNCS vol. 3253, Springer, 2004.
