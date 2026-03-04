@@ -32,7 +32,35 @@ For a local (non-system-wide) installation, export the `PKG_CONFIG_PATH` variabl
 export PKG_CONFIG_PATH='<path_to_dynibex>/share/pkgconfig'
 ```
 
-**Important:** Copy the provided file `ibex_Expr.h` into your DynIbex source tree before building.
+### 1.1.2. Patching DynIbex Header Files
+
+**Important:** Several header files provided with this distribution must be copied into your DynIbex installation before building. These files contain modifications required for affine arithmetic access, simulation data extraction, and expression handling used by the NNCS verification tool.
+
+Copy the following files into the DynIbex **include directory** (typically `<path_to_dynibex>/include/ibex/` or the corresponding source directories prior to compilation):
+
+| Provided File | Description |
+|---|---|
+| `ibex_Expr.h` | Extended expression tree with additional node access required for symbolic differentiation and function composition. |
+| `ibex_Affine2.h` | Modified affine form class with additional accessors for extracting noise symbol coefficients and center values. |
+| `ibex_Affine2_fAFFullI.h` | Extended sparse affine form (full interval variant) with public access to the ray list and garbage interval. |
+| `ibex_simulation.h` | Modified simulation class exposing the affine form state at each integration step, enabling zonotope extraction from the validated ODE solver. |
+| `ibex_ivp_ode.h` | Extended ODE initial value problem structure with affine-form initial conditions and derivative computation interfaces. |
+| `ibex.h` | Updated master include file ensuring all required DynIbex modules are available. |
+| `ibex_Setting.h` | Build configuration header specifying the IBEX release version and enabled backends. |
+
+To apply the patch, assuming DynIbex is installed at `<DYNIBEX_DIR>`:
+
+```bash
+cp ibex_Expr.h            /include/ibex/
+cp ibex_Affine2.h         /include/ibex/
+cp ibex_Affine2_fAFFullI.h /include/ibex/
+cp ibex_simulation.h      /include/ibex/
+cp ibex_ivp_ode.h         /include/ibex/
+cp ibex.h                 /include/ibex/
+cp ibex_Setting.h         /include/ibex/
+```
+
+If you are building DynIbex from source, place these files in the corresponding source directories **before** running the build commands. Failing to apply these modifications will result in compilation errors due to missing accessors on affine forms and simulation objects.
 
 ### 1.2. Additional Dependencies
 
